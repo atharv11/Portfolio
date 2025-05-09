@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Paragraph from "./Paragraph";
 import Lenis from "lenis";
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { ReactLenis } from "lenis/react";
 import Projects from "./Projects";
 import "./scroll.css";
@@ -35,6 +36,7 @@ export default function Page() {
  h-screen w-full text-white bg-zinc-900">
         <Paragraph value={paragraph} />
       </div>
+      <div className="h-[90vh] bg-zinc-900"></div>
    <Projects/>
     </ReactLenis>
   );
