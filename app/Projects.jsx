@@ -15,7 +15,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="w-full h-[100vh]  bg-zinc-950 p-5 text-[1.25vw] overflow-y-auto z-99">
+    <div className="w-full h-[100vh]  p-5 text-[1.25vw] overflow-y-auto ">
       
       {/* Header Row */}
       <div className="grid opacity-60 grid-cols-4 gap-x-[11vw] border-b-2 border-white pb-2 text-zinc-200 uppercase">

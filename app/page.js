@@ -34,15 +34,13 @@ export default function Page() {
 
   return (
     <ReactLenis root>
-                 <ModelViewer className=""/>
-      <div className="h-screen w-full text-white  bg-zinc-950">
-  
-    <Navbar/>
-        <Paragraph  />
-       <div className="h-[90vh]  bg-zinc-950"></div>
-      <Projects  />
-  
-      </div>
+                 <ModelViewer />
+<div className="relative z-10">
+  <Navbar />
+  <Paragraph />
+      <div className="h-[50vw]"></div>
+  <Projects />
+</div>
 
 
     </ReactLenis>

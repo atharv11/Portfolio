@@ -17,7 +17,7 @@ const opacity = useTransform(scrollYProgress, [0,0.05, 0.1,  1], [1,0.9, 0.8, 0]
      scrollYProgress.on("change", e=> console.log(e))
   },[])
   return (
-    <motion.div className="  ml-[2vw] flex flex-col opacity-85 h-[40vw] w-[95vw]   text-[4.9vw]  pt-[15vw] ">
+    <motion.div className="text-white  ml-[2vw] flex flex-col opacity-85 h-[40vw] w-[95vw]   text-[4.9vw]  pt-[15vw] ">
       <motion.div
       ref={element}
       style={{ opacity }}
