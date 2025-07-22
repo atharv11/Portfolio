@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect } from "react";
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import React, { useEffect, useRef } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 import Paragraph from "./Paragraph";
 import Lenis from "lenis";
 import { ReactLenis } from "lenis/react";
@@ -9,8 +9,15 @@ import Projects from "./Projects";
 import "./scroll.css";
 import Navbar from "./Navbar";
 import ModelViewer from "./ModelViewer";
+import Contact from "./Contact";
 
 export default function Page() {
+  const sectionControl = useRef(null);
+
+  const scrollHandler = (elemRef) => {
+    window.scrollTo({ top: elemRef.current.offsetTop, behavior: "smooth" });
+  };
+
   useEffect(() => {
     const lenis = new Lenis({
       smooth: true,
@@ -34,15 +41,15 @@ export default function Page() {
 
   return (
     <ReactLenis root>
-                 <ModelViewer />
-<div className="relative z-10">
-  <Navbar />
-  <Paragraph />
-      <div className="h-[50vw]"></div>
-  <Projects />
-</div>
+      <ModelViewer />
 
-
+      <div className="relative z-10">
+        <Navbar scrollHandler={scrollHandler} sectionControl={sectionControl} />
+        <Paragraph />
+        <div className="h-[30vw]"></div>
+        <Projects />
+        <Contact sectionControl={sectionControl} />
+      </div>
     </ReactLenis>
   );
 }

@@ -17,15 +17,15 @@ const opacity = useTransform(scrollYProgress, [0,0.05, 0.1,  1], [1,0.9, 0.8, 0]
      scrollYProgress.on("change", e=> console.log(e))
   },[])
   return (
-    <motion.div className="text-white  ml-[2vw] flex flex-col opacity-85 h-[40vw] w-[95vw]   text-[4.9vw]  pt-[15vw] ">
+    <motion.div className=" text-white  ml-[2vw] flex flex-col opacity-85 h-[40vw] w-[95vw]   text-[4.9vw]  pt-[15vw] ">
       <motion.div
       ref={element}
       style={{ opacity }}
       transition={{ ease: "easeOut", duration: 0.2 }}
-      className="leading-[0.9]  w-full">
+      className="leading-[0.9]  w-full ">
         <div className=" h2 capitalize pl-[24vw]">A <span className="h1">THARV</span> S<span className="h1">AHARE</span></div> 
        <div className="h1  pl-[35vw] capitalize">FRONT END</div>  <div className="h3 pl-[22vw] capitalize text-[5.5vw]">☼ WEB DEVELOPER☀ </div><div className="h1 pl-[20vw] ">STUDYING MSc @ OVGU</div> 
-        <div className="capitalize h3 pl-[24vw]">BASED IN  MAGDEBURG </div></motion.div>
+        <div className="capitalize h3 text-[5vw] pl-[20vw]">BASED IN  MAGDEBURG ⚗✨</div></motion.div>
     </motion.div>
   );
 }

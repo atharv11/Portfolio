@@ -1,46 +1,57 @@
 import React, { useContext, useState } from "react";
 
+function Navbar({ scrollHandler, sectionControl }) {
 
-function Navbar() {
-
-  const items = ["Contact", "Illustrator", "LinkeIn"];
+  const items = ["CONTACT", "GITHUB", "LINKEDIN"];
   return (
-    <div className="fixed mix-blend-difference whitespace-nowrap opacity-90 duration-300 text-[#ffffff] z-[9999] w-full px-20 py-8 font-['Neue Montreal'] flex justify-between items-center ">
-  
-        <div className="logo font-['Neue Montreal'] font-extralight text-3xl tracking-tighter ">
-      Atharv Sahare
-        </div>
+    <div className="fixed mix-blend-difference whitespace-nowrap opacity-90 text-[#ffffff] z-[9999] w-full px-10 py-2  flex justify-between items-center ">
+      <div className="logo  font-extralight text-xl tracking-tighter ">
+        Atharv Sahare
+      </div>
 
-      <div className="gap-10 flex">
+      <div className="gap-5 flex">
         {items.map((item, index) => {
-          if (item === "Shopping bag") {
+
+ if (item === "CONTACT") {
             return (
               <div
                 key={index}
-    
-                className="cursor-pointer text-lg capitalize font-light ml-32"
+                onClick={() => scrollHandler(sectionControl)}
+                className="cursor-pointer  capitalize font-light"
               >
-                {item} 
+
+                  {item}
               </div>
             );
           }
-          if (item === "Search") {
+          if (item === "LINKEDIN") {
             return (
               <div
                 key={index}
-         
-                className="cursor-pointer text-lg capitalize font-light"
+                className="cursor-pointer  capitalize font-light"
               >
-                {item}
+                <a
+                  href="https://www.linkedin.com/in/atharv-sahare/"
+                  rel="noopener noreferrer"
+                >
+                  {item}
+                </a>
+              </div>
+            );
+          }
+          if (item === "GITHUB") {
+            return (
+              <div
+                key={index}
+                className="cursor-pointer  capitalize font-light"
+              >
+                <a href="https://github.com/atharv11"> {item} </a>
               </div>
             );
           }
 
           return (
-            <div   
-            key={index}
-              className="cursor-pointer text-lg capitalize font-light"
-            >
+            <div key={index} className="cursor-pointer capitalize font-light">
               {item}
             </div>
           );
