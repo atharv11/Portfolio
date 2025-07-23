@@ -13,7 +13,7 @@ export default function Projects() {
   const project = {
     discription: {
       one: "This project is still in progress the updates regarding this project will up updated here soon",
-      two : "Built interactive UI elements with Framer Motion, enhancing navigation and reducing load times.",
+      two : "Built interactive UI elements with Framer Motion, enhancing navigation and reducing load times. Crafted a responsive front-end for an e-commerce store",
       three: "Built the frontend of an adaptive learning platform using ReactJS and TailwindCSS, enabling PDF uploads, dynamic quizzes, and performance tracking. The UI connects to a Django backend with an LLM and genetic algorithm for personalized content.",
     },
   };
@@ -69,13 +69,17 @@ export default function Projects() {
      {rowIndex === 2 && (
   <div className="w-[60vw] h-[20vw]  text-white ">
      <div className="text-3xl mt-2">{project.discription.two}</div>
+     <a href="https://github.com/atharv11/MuseWomen">
      <button   className="bg-white rounded-full text-black mt-6 px-3">SEE PROJECT</button>
+     </a>
   </div>
 )}
        {rowIndex === 1 && (
   <div className="w-[60vw] h-[20vw]  text-white ">
      <div className="text-3xl mt-2">{project.discription.three}</div>
+     <a href="https://github.com/atharv11/Flash_card-Quizz_generator">
      <button  className="bg-white rounded-full text-black mt-6 px-3">SEE PROJECT</button>
+     </a>
   </div>
 )}
   {rowIndex === 3 && (
